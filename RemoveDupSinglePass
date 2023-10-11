@@ -1,0 +1,17 @@
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        int prevNum = 999; // max num is given as 100, this will provide a mismatch.        
+        int k = 0;
+        
+        for (int i = 0; i < nums.length; i++){     
+            if (prevNum != nums[i]){
+                nums[k] = nums[i];
+                prevNum = nums[i];
+                k++;
+            }                         
+        }
+                    
+        
+        return k;
+    }
+}
